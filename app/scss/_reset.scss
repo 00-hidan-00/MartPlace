@@ -1,15 +1,16 @@
-html{
+html {
   box-sizing: border-box;
 }
 
 *,
 *::after,
-*::before{
+*::before {
   box-sizing: inherit;
 }
 
 ul[class],
-ol[class] {
+ol[class],
+ul {
   padding: 0;
 }
 
@@ -32,7 +33,8 @@ dd {
   margin: 0;
 }
 
-ul[class] {
+ul[class],
+ul {
   list-style: none;
 }
 
@@ -48,6 +50,6 @@ select {
   font: inherit;
 }
 
-a{
+a {
   text-decoration: none;
 }
