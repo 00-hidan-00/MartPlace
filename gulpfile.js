@@ -1,16 +1,16 @@
-const { src, dest, watch, parallel, series }  = require('gulp');
+const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss          = require('gulp-sass');
-const concat        = require('gulp-concat');
-const browserSync   = require('browser-sync').create();
-const uglify        = require('gulp-uglify-es').default;
-const autoprefixer  = require('gulp-autoprefixer');
-const imagemin      = require('gulp-imagemin');
-const del           = require('del');
+const scss = require('gulp-sass');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify-es').default;
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
+const del = require('del');
 
 function browsersync() {
   browserSync.init({
-    server : {
+    server: {
       baseDir: 'app/'
     }
   });
@@ -42,7 +42,9 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.js',
-    'app/js/main.js'
+    'app/js/main.js',
+    'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/rateyo/src/jquery.rateyo.js'
   ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -52,15 +54,17 @@ function scripts() {
 
 
 function styles() {
-  return src('app/scss/style.scss')
-      .pipe(scss({outputStyle: 'compressed'}))
-      .pipe(concat('style.min.css'))
-      .pipe(autoprefixer({
-        overrideBrowserslist: ['last 10 version'],
-        grid: true
-      }))
-      .pipe(dest('app/css'))
-      .pipe(browserSync.stream())
+  return src(['app/scss/style.scss',
+    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/rateyo/src/jquery.rateyo.css'])
+    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 version'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
 }
 
 function build() {
@@ -69,7 +73,7 @@ function build() {
     'app/fonts/**/*',
     'app/js/main.min.js',
     'app/*.html'
-  ], {base: 'app'})
+  ], { base: 'app' })
     .pipe(dest('dist'))
 }
 
@@ -88,6 +92,6 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel(styles ,scripts ,browsersync, watching);
+exports.default = parallel(styles, scripts, browsersync, watching);
 
 
