@@ -21,7 +21,5 @@
     "mixitup": "^3.3.1",
     "slick-carousel": "^1.8.1"
   },
-  "dependencies": {
-    "rateyo": "^3.0.0-alpha.2"
-  }
+  "dependencies": {}
 }

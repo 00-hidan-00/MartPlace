@@ -27,5 +27,32 @@ $(function () {
       prevArrow: '<button class="slick-arrow slick-prev blue"><span class="lnr lnr-chevron-left"></span></button>',
       nextArrow: '<button class="slick-arrow slick-next blue"><span class="lnr lnr-chevron-right"></span></button>'
    });
+
+
+
+
 });
 
+$('.menu__btn').on('click', function () {
+   $('.menu__list').slideToggle();
+});
+
+$('.menu__list-home').on('click', function () {
+   $('.menu__list-home-active').slideToggle();
+});
+
+$('.menu__list-products').on('click', function () {
+   $('.menu__list-products-active').slideToggle();
+});
+
+$('.menu__list-worpress').on('click', function () {
+   $('.menu__list-worpress-active').slideToggle();
+});
+
+$('.menu__list-pages').on('click', function () {
+   $('.menu__list-pages-active').slideToggle();
+});
+
+$('.header__btn-menu').on('click', function () {
+   $('.header__box, .header__link, .header__logo').toggleClass('active');
+});
