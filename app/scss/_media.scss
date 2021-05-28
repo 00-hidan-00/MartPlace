@@ -1,7 +1,12 @@
 @media (max-width: 990px) {
    .search__form {
       button {
-         bottom: 44px;
+         background-color: transparent;
+         padding: 10px 26px;
+         span::before {
+            color: $blue;
+            font-size: 20px;
+         }
       }
    }
    .menu__btn {
