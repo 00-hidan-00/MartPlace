@@ -3191,7 +3191,7 @@
    justify-content: space-between;
    padding: 100px 0;
 }
-.tutorial__wrapper:nth-child(even) {
+.tutorial__wrapper:nth-child(odd) {
    background-color: $bg;
 }
 .tutorial__box {
