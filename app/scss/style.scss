@@ -3251,6 +3251,210 @@
 }
 // end tutorial
 
+// start register
+
+.register {
+   background-color: $bg;
+   padding: 70px 0 120px;
+   &__inner {
+      background-color: #fff;
+      margin: 0 auto;
+      max-width: 555px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      &-top {
+         text-align: center;
+         border-bottom: 1px solid $bg;
+         padding: 60px 62px 30px;
+      }
+   }
+   &__title {
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 400;
+      margin-bottom: 25px;
+   }
+   &__text {
+      font-size: 15px;
+      line-height: 28px;
+      &-recover {
+         text-align: left;
+      }
+   }
+   &__inner-form {
+      padding: 30px 50px 60px;
+   }
+   &__line {
+      label {
+         display: block;
+         font-size: 16px;
+         color: #000;
+         font-weight: 500;
+         margin-bottom: 12px;
+      }
+      input {
+         display: block;
+         margin-bottom: 30px;
+         width: 100%;
+         border: none;
+         background-color: #f4f5f8;
+         padding: 14px 20px;
+         &::placeholder {
+            color: #898f96;
+            font-size: 16px;
+         }
+      }
+   }
+   &__btn {
+      cursor: pointer;
+      background-color: $blue;
+      font-size: 15px;
+      padding: 18px 45px;
+      border-radius: 50px;
+      border: none;
+      color: #fff;
+      margin-bottom: 45px;
+      font-weight: 500;
+      &-submit {
+         padding: 14px 52px;
+      }
+   }
+   &__question {
+      font-size: 16px;
+      line-height: 26px;
+      a {
+         color: $blue;
+      }
+   }
+}
+
+// end register
+
+// start price
+
+.price {
+   background-color: $bg;
+   padding: 120px;
+   text-align: center;
+   &__title {
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 30px;
+      color: #000;
+      margin-bottom: 35px;
+      span {
+         color: $blue;
+      }
+   }
+   &__text {
+      max-width: 675px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 60px;
+   }
+   &__boxs {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__box {
+      max-width: 360px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      margin: 0 5px;
+      &-title {
+         font-weight: 500;
+         font-size: 24px;
+         line-height: 33px;
+         padding: 28px 0;
+         border-bottom: 1px solid $bg;
+
+         border-top-right-radius: 5px;
+         &-orange {
+            border-top: 1px solid #ff6a6c;
+         }
+         &-blue {
+            border-top: 1px solid $blue;
+         }
+         &-yellow {
+            border-top: 1px solid #feb71d;
+         }
+      }
+      &-price {
+         font-weight: 500;
+         font-size: 36px;
+         line-height: 36px;
+         color: #000;
+         margin: 30px 0 50px;
+         sup {
+            font-size: 18px;
+         }
+         span {
+            font-size: 16px;
+            line-height: 16px;
+            color: $text;
+         }
+      }
+      &-list {
+         display: block;
+         text-align-last: left;
+         padding: 0 50px !important;
+      }
+      &-li {
+         position: relative;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+         span {
+            color: #000;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+         }
+         &::before {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #c5cad4;
+            border-radius: 100%;
+            top: 9px;
+            left: -20px;
+         }
+         span.lnr.lnr-question-circle {
+            cursor: pointer;
+            margin-left: 10px;
+         }
+      }
+      &-btn {
+         max-width: 300px;
+         width: 100%;
+         padding: 17px;
+         color: #fff;
+         border: none;
+         border-radius: 4px;
+         font-weight: 500;
+         font-size: 18px;
+         line-height: 18px;
+         margin-bottom: 30px;
+         cursor: pointer;
+         &-orange {
+            background-color: #ff6a6c;
+         }
+         &-blue {
+            background-color: $blue;
+         }
+         &-yellow {
+            background-color: #feb71d;
+         }
+      }
+   }
+}
+
+// endprice
+
 // start footer
 
 .footer {
