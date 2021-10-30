@@ -269,7 +269,7 @@
    &__menu {
       position: absolute;
       z-index: 10;
-      max-width: 400px;
+      width: 400px;
       background-color: #fff;
       top: 99px;
       right: -50px;
@@ -314,9 +314,6 @@
          flex-direction: column;
          justify-content: space-around;
          align-items: center;
-         a {
-            color: #818c98;
-         }
       }
       &-basket {
          display: flex;
@@ -3453,7 +3450,206 @@
    }
 }
 
-// endprice
+// end price
+
+// start blog
+
+.blog {
+   background-color: $bg;
+   padding: 70px 0 120px;
+   &__items {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__item {
+      max-width: 750px;
+      &-block {
+         margin-bottom: 60px;
+         padding-bottom: 40px;
+         background-color: #fff;
+         border-radius: 5px;
+         box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      }
+      &-img {
+         width: 100%;
+         height: auto;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         margin-bottom: 45px;
+      }
+      &-title {
+         padding: 0 30px;
+         margin-bottom: 30px;
+         @include f500;
+         font-size: 30px;
+         line-height: 33px;
+         &-link {
+            max-width: 690px;
+            color: #000;
+            transition: all 0.3s;
+            &:hover {
+               color: $blue;
+            }
+         }
+      }
+      &-box {
+         padding-left: 30px;
+         margin-bottom: 30px;
+         max-width: 400px;
+         display: flex;
+         justify-content: space-between;
+         font-size: 15px;
+         .span-author {
+            color: $blue;
+         }
+      }
+      &-text {
+         padding: 35px 30px;
+         border-top: 1px solid $bg;
+         font-size: 16px;
+         line-height: 30px;
+      }
+      &-btn {
+         margin-left: 30px;
+         background-color: $blue;
+         font-size: 16px;
+         line-height: 16px;
+         padding: 18px 25px;
+         color: #fff;
+         display: block;
+         border-radius: 50px;
+         max-width: 140px;
+      }
+   }
+   &__aside {
+      max-width: 360px;
+      width: 100%;
+      &-box {
+         background-color: #fff;
+         border-radius: 5px;
+         margin-bottom: 30px;
+         box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      }
+      &-title {
+         padding: 30px 25px;
+         font-size: 20px;
+         line-height: 22px;
+         color: #000;
+         border-bottom: 1px solid $bg;
+         @include f500;
+      }
+      .footer__col-form.search__form {
+         margin: 40px 25px;
+         max-height: 80px;
+         input {
+            max-width: 310px;
+            display: block;
+            &::placeholder {
+               font-size: 15px;
+            }
+         }
+         button {
+            left: 240px;
+            display: block;
+         }
+      }
+      &-titles {
+         border-bottom: 1px solid $bg;
+         width: 100%;
+         .blog__aside-title {
+            border: none;
+            background-color: transparent;
+            transition: all 0.5s;
+
+            &:focus {
+               color: $blue;
+            }
+         }
+      }
+      &-post {
+         display: flex;
+         align-items: center;
+         margin: 22px 27px;
+         padding-bottom: 22px;
+         border-bottom: 1px solid $bg;
+         &-info {
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 70px;
+         }
+      }
+      &-img {
+         width: 70px;
+         height: 70px;
+      }
+
+      &-text {
+         @include f500;
+         font-size: 16px;
+         line-height: 24px;
+         color: #000;
+      }
+      &-date {
+         font-size: 15px;
+         line-height: 15px;
+      }
+      &-list {
+         margin: 30px 25px;
+         padding-bottom: 20px !important;
+         .lnr.lnr-chevron-right {
+            margin-right: 15px;
+         }
+         li {
+            font-size: 16px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: space-between;
+            &:hover {
+               color: $blue;
+            }
+            a {
+               color: inherit;
+            }
+         }
+      }
+      &-tags {
+         margin: 30px 25px;
+         padding-bottom: 30px;
+      }
+      &-tag {
+         background-color: #edf5fe;
+         border-radius: 50px;
+         border: none;
+         color: $blue;
+         margin-right: 8px;
+         margin-bottom: 12px;
+         font-size: 15px;
+         line-height: 17px;
+         padding: 8px 10px;
+         cursor: pointer;
+         &:hover {
+            background-color: $blue;
+            color: #fff;
+         }
+         &:focus {
+            background-color: $blue;
+            color: #fff;
+         }
+      }
+   }
+}
+
+.blog__pagination {
+   display: block;
+   .pagination__list {
+      margin: 0;
+   }
+}
+
+//end blog
 
 // start footer
 

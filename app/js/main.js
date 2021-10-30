@@ -8,6 +8,8 @@ $(function () {
    var mixer = mixitup('.products__inner-products');
 
 
+
+
    $('.product-slider__inner').slick({
       speed: 500,
       slidesToShow: 1,
@@ -33,7 +35,11 @@ $(function () {
 
 });
 
+$(function () {
 
+   var mixer = mixitup('.blog__aside-posts');
+
+});
 
 $('.wrapper .tab').on('click', function (event) {
    var id = $(this).attr('data-id');
