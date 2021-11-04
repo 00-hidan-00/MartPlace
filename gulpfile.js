@@ -1,6 +1,6 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss = require('gulp-sass');
+const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
@@ -12,7 +12,8 @@ function browsersync() {
   browserSync.init({
     server: {
       baseDir: 'app/'
-    }
+    },
+    tunnel: true
   });
 }
 
@@ -55,8 +56,8 @@ function scripts() {
 
 function styles() {
   return src([
-    'node_modules/rateyo/src/jquery.rateyo.css',
     'node_modules/normalize.css/normalize.css',
+    'node_modules/rateyo/src/jquery.rateyo.css',
     'app/scss/style.scss'
   ])
     .pipe(scss({ outputStyle: 'compressed' }))

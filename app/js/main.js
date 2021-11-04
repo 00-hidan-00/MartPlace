@@ -24,10 +24,28 @@ $(function () {
    $('.followers-slider__inner').slick({
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 1,
+      slidesToScroll: 3,
+      dots: false,
       arrows: true,
       prevArrow: '<button class="slick-arrow slick-prev blue"><span class="lnr lnr-chevron-left"></span></button>',
-      nextArrow: '<button class="slick-arrow slick-next blue"><span class="lnr lnr-chevron-right"></span></button>'
+      nextArrow: '<button class="slick-arrow slick-next blue"><span class="lnr lnr-chevron-right"></span></button>',
+      responsive: [
+         {
+            breakpoint: 1181,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               infinite: true
+            }
+         },
+         {
+            breakpoint: 791,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
    });
 
 
