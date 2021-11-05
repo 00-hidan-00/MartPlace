@@ -3,6 +3,11 @@ body {
 	height: 100%;
 	position: relative;
 	overflow-x: hidden;
+	font-family: "Quicksand", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 23px;
+	color: $text;
 }
 
 .wrapper {
@@ -14,13 +19,7 @@ body {
 .main {
 	flex: 1 0 auto;
 }
-body {
-	font-family: "Quicksand", sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 23px;
-	color: $text;
-}
+
 .footer {
 	flex: 0 0 auto;
 }
